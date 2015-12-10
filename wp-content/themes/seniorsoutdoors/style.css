@@ -990,13 +990,15 @@ header {
 
 #header-slider div {
     position:absolute;
-    z-index: 0;
+	display: none;
 }
-#header-slider div.previous {
+#header-slider div.next {
     z-index: 1;
+    display: block;
 }
 #header-slider div.current {
     z-index: 2;
+    display: block;
 }
 
 

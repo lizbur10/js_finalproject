@@ -17,24 +17,31 @@
 
 <?php wp_footer(); ?>
 <script type="text/javascript" charset="utf-8">
-	$("#header-slider").find("div:first").addClass("current");
+//	$("#header-slider div").css("display", "none");
+	$("#header-slider").find("div:first").addClass("current").next().addClass("next");
 	var numberOfImages = $("#header-slider div").length,
 		counter = 1;
 	window.setInterval(runSlider, 3000);
 
 	function runSlider() {
-		$(".previous").removeClass("previous");
+//		$(".previous").removeClass("previous");
 		if (counter < numberOfImages) {
-			$(".current").next().css("display", "none");
-			$(".current").removeClass("current").fadeOut(1500).addClass("previous")
-				.next().fadeIn(1500).addClass("current");
+			$(".current").css("display","block").next().addClass("next").css("display","block");
+			$(".current").slideUp(1500, function() {
+				$(".current").removeClass("current");
+				$(".next").removeClass("next").addClass("current");
+				counter++;
+			});
+/*			$(".next").addClass("current").removeClass("next");
 			counter++;
-		} else {
-			$(".current").removeClass("current").fadeOut(1500).addClass("previous");
-			$("#header-slider div:first").addClass("current").fadeIn(1500);
-			counter=1;
+*/		} else {
+			$("#header-slider div:first").css("display","block");
+			$(".current").slideUp(1500, function() {
+				$(".current").removeClass("current");
+				$("#header-slider div:first").addClass("current");
+				counter=1;
+			});
 		}
-
 	}
 </script> 
 
