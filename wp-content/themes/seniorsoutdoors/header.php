@@ -22,23 +22,26 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'seniorsoutdoors' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-	    <section id='header-slider'>
-			<?php $images = get_field('image_gallery'); 
-	        if( $images ): ?>
-                <?php foreach( $images as $image ): ?>
-                    <div><img class="slides" src="<?php echo $image['url']; ?>"  />
-	                </div>
-                <?php endforeach; ?>
-	        <?php endif; ?>
-	    </section>
-
 		<div class="site-branding">
 			<a href="<?php echo home_url(); ?>">
 				<img id="logo" src="<?php  echo get_stylesheet_directory_uri().'/images/SO_logo_small_cleaned.png' ; ?>" alt="<?php bloginfo( 'name' );?> ">
 				<p class="site-name">Seniors Outdoors!</p>
 			</a>
 		</div><!-- .site-branding -->
+
+	<header id="masthead" class="site-header" role="banner">
+	    <section id='header-slider'>
+			<?php $images = get_field('image_gallery'); 
+	        if( $images ): 
+	        	$counter = 1;
+                foreach( $images as $image ): 
+                	$ImageId = "galleryImage$counter"; ?>
+                    <div><img id="<?php echo $ImageId ?>" class="slides" src="<?php echo $image['url']; ?>"  />
+	                </div>
+	                <?php $counter++; 
+                endforeach;
+	        endif; ?>
+	    </section>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'seniorsoutdoors' ); ?></button>
