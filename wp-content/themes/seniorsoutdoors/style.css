@@ -903,6 +903,7 @@ object {
 
 header {
 	height: 15rem;
+	margin:0;
 }
 
 .site-branding {
@@ -965,58 +966,32 @@ header {
 }
 
 
-/* Home Page - Gallery */
+/* Home Page - Image Slider */
 
 #header-slider {
 	position: absolute;
-	width: 80%;
+	height: 250px;
+	width: 100%;
 	left: 200px;
+	margin-right: 0;
 	overflow: hidden;
+	border: 1px black solid;
 }
 
-/*#header-slider div {
-	position:absolute;
+#header-slider div {
+	position: absolute;
 	left: 150%;
+
 }
-*/
+
 .slides {
-	max-height: 240px;
+	position: relative;
+	height: 240px;
 	margin-top: -2rem;
-	float: left;
 	padding: 3px;
 	list-style: none;
 	margin: 0;
 }
-
-.slides img {
-	float: right;
-	display: block;
-	max-height: 240px;
-	margin: 0;
-	left: 50%;
-	top: 50%;
-}
-#header-slider div {
-	opacity: 0;
-}
-/*#header-slider div.next {
-    z-index: 1;
-    display: block;
-}
-#header-slider div.current {
-    z-index: 2;
-    display: block;
-}
-*/#header-slider div.visible {
-	opacity: 1;
-}
-
-#header-slider div.invisible {
-	opacity: 0;
-}
-
-/* End Gallery Section */
-
 
 
 
