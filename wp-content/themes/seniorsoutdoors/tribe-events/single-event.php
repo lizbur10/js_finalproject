@@ -109,20 +109,21 @@ $event_id = get_the_ID();
 
 				<?php if (! ($rsvp == 'No')): ?>
 
-<!--	 				<section class="register-button">
--->						<?php if ($rsvp == 'Non-members only'): ?>
-							<button class="register-button" type="submit">Register (non-members only)</button>
-						<?php else: ?>
-							<button class="register-button">Register</button>
-						<?php endif; ?>
-						<form name="outing_registration" action="#" method="post" class="visually-hidden">
-							<p><label for="name">Name</label>: <input id="name" type="text" name="name" size="30" required></p>
-							<p><label for="email">Email</label>: <input id="email" type="email" name="email" size="30" required></p>
+					<button class="register-button">Register Now</button>
+					<?php if ($rsvp == 'Non-members only'): ?>
+						<p class="non-members-only"><strong>Note:</strong> Registration is required for non-members only</p>
+					<?php endif; ?>
+					<div id="outing-registration" class="visually-hidden">
+						<form name="outing-registration" action="#" method="post">
+							<p><label for="name">Name</label>: <input id="name" type="text" name="name" size="30"></p>
+							<p><label for="email">E-mail</label>: <input id="email" type="email" name="email" size="30"></p>
 							<p><label for="number_of_people">Number of people</label>: <input id="number_of_people" type="number" name="number_of_people" min="1" max="4" value="1" required></p>
-							<button type="submit">RSVP Now</button>
+							<button id="rsvp-button">RSVP Now</button><button id="cancel-button">Cancel</button>
 						</form>
-<!--					</section>
--->				<?php endif; ?>
+					</div>
+					<div id="background-overlay" class="visually-hidden"></div>
+					<div id="thanks-message" class="visually-hidden">Thanks for registering!</div>
+				<?php endif; ?>
 			</div>
 
 			<!-- Event description -->

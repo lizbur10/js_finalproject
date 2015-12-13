@@ -1233,9 +1233,44 @@ li.tribe-events-nav-next {
 	background-color: lightgray;
 	font-size: 1.2rem;
 	color: #333;
-	margin-left: 1rem;
+	margin-left: 5rem;
 }
 
+.non-members-only {
+	color: #333;
+	font-size: 1rem;
+}
+
+#outing-registration {
+  position: absolute;
+  left: 350px;
+  top: 30px;
+  border: 2px solid #000;
+  background-color: #D5DBD8;
+  border-radius: 5px;
+  padding: 15px;
+  color: #2B2828;
+  z-index: 3;
+}
+
+#outing-registration p {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin: 5px;
+}
+
+#background-overlay {
+    background-color: #333;
+    opacity: 0.8;
+    position: absolute;
+    left: 0px;
+    z-index: 2;
+    margin-top: -30rem;
+    margin-left: -5rem;
+    height: 160%;
+    width: 109%;
+    overflow: hidden;
+}
 
 /* Footer */
 .copyright {

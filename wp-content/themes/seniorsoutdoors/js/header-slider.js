@@ -1,4 +1,3 @@
-$(document).ready(function() {
 //Initial placement of images
 var numberOfImages = $("#header-slider div img").length,
 	counter = 0,
@@ -40,4 +39,3 @@ function runSlider() {
 	if (counter > numberOfImages) { counter = 1; }
 }
 //End Image slider
-});

@@ -37,6 +37,23 @@
 */
 //End hover text
 
+//Registration UI
+$(".register-button").click(function() {
+  	$("#outing-registration").removeClass("visually-hidden");
+  	$("#background-overlay").removeClass("visually-hidden");
+});
+
+$("#rsvp-button").click(function() {
+	$("#outing-registration").addClass("visually-hidden");
+	alert("Thanks for registering!");
+});
+
+$("#cancel-button").click(function() {
+    document.execCommand('Stop')
+});
+
+//End of registration UI
+
 </script> 
 
 </body>
