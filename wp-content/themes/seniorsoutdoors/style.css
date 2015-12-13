@@ -1229,6 +1229,13 @@ li.tribe-events-nav-next {
 	float: right;
 }
 
+.register-button {
+	background-color: lightgray;
+	font-size: 1.2rem;
+	color: #333;
+	margin-left: 1rem;
+}
+
 
 /* Footer */
 .copyright {

@@ -33,14 +33,16 @@
 	    <section id='header-slider'>
 			<?php $images = get_field('image_gallery'); ?>
 	        <?php if( $images ): 
-	        	$counter = 1;
+	        	$imagesPresent = true;
+	        	$imageCounter = 1;
                 foreach( $images as $image ): 
-                	$ImageId = "galleryImage$counter"; ?>
+                	$ImageId = "galleryImage$imageCounter"; ?>
                     <div><img id="<?php echo $ImageId ?>" class="slides" src="<?php echo $image['url']; ?>"  />
 	                </div>
-	                <?php $counter++; ?>
-               <?php endforeach;
-	        endif; ?>
+	                <?php $imageCounter++; ?>
+               <?php endforeach; ?>
+	        <?php endif; ?>
+
 	    </section>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

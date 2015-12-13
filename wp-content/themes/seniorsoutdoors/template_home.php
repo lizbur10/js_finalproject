@@ -52,6 +52,8 @@ Template Name: Custom Homepage Template
 
 </div>
 
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/header-slider.js">
+
 <?php
 	get_footer();
 

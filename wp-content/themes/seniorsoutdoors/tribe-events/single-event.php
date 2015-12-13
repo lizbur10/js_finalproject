@@ -97,22 +97,6 @@ $event_id = get_the_ID();
 				<?php endif; ?>
 			</div>
 
-			<?php if (! ($rsvp == 'No')): ?>
-
-				<section id="register">
-					<?php if ($rsvp == 'Non-members only'): ?>
-						<h2>Register (non-members only):</h2>
-					<?php else: ?>
-						<h2>Register:</h2>
-					<?php endif; ?>
-					<form name="outing_registration" action="#" method="post">
-						<p><label for="name">Name</label>: <input id="name" type="text" name="name" size="30" required></p>
-						<p><label for="email">Email</label>: <input id="email" type="email" name="email" size="30" required></p>
-						<p><label for="number_of_people">Number of people</label>: <input id="number_of_people" type="number" name="number_of_people" min="1" max="4" value="1" required></p>
-						<button type="submit">RSVP Now</button>
-					</form>
-				</section>
-			<?php endif; ?>
 
 			<!-- Schedule & Recurrence Details -->
 			<div class="updated published time-details">
@@ -122,6 +106,23 @@ $event_id = get_the_ID();
 					echo tribe_get_start_date(null,FALSE,'F j'); ?> - <?php
 					echo tribe_get_end_date(null,FALSE,'F j'); 
 				endif; ?>
+
+				<?php if (! ($rsvp == 'No')): ?>
+
+<!--	 				<section class="register-button">
+-->						<?php if ($rsvp == 'Non-members only'): ?>
+							<button class="register-button" type="submit">Register (non-members only)</button>
+						<?php else: ?>
+							<button class="register-button">Register</button>
+						<?php endif; ?>
+						<form name="outing_registration" action="#" method="post" class="visually-hidden">
+							<p><label for="name">Name</label>: <input id="name" type="text" name="name" size="30" required></p>
+							<p><label for="email">Email</label>: <input id="email" type="email" name="email" size="30" required></p>
+							<p><label for="number_of_people">Number of people</label>: <input id="number_of_people" type="number" name="number_of_people" min="1" max="4" value="1" required></p>
+							<button type="submit">RSVP Now</button>
+						</form>
+<!--					</section>
+-->				<?php endif; ?>
 			</div>
 
 			<!-- Event description -->
