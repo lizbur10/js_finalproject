@@ -13,12 +13,6 @@ Template Name: Custom Homepage Template
 
 <div class="page-content">
 
-    <section class="calendar-month-view">
-        <h2 class="calendar-month-title">Outing Schedule</h2> 
-        <h3 class="month-year"><?php echo tribe_event_format_date( $date, $displayTime = false, $dateFormat = 'F Y' ); ?></h3>
-        <?php tribe_show_month(); ?>
-    </section>
-
     <section class="featured">
         <?php $found = false;
 
@@ -45,10 +39,15 @@ Template Name: Custom Homepage Template
                         <p class="single-space">Meeting: 7:00 pm</p>
                     <?php endif;
     		        $content = the_content(); ?>
-                    <hr>
                 <?php endif; 
             endwhile;
         endif; ?>
+    </section>
+
+    <section class="calendar-month-view">
+        <h2 class="calendar-month-title">Outing Schedule</h2> 
+        <h3 class="month-year"><?php echo tribe_event_format_date( $date, $displayTime = false, $dateFormat = 'F Y' ); ?></h3>
+        <?php tribe_show_month(); ?>
     </section>
 
 </div>

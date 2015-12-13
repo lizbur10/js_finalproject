@@ -971,17 +971,15 @@ header {
 #header-slider {
 	position: absolute;
 	height: 250px;
-	width: 100%;
+	width: 84.6%;
 	left: 200px;
 	margin-right: 0;
 	overflow: hidden;
-	border: 1px black solid;
 }
 
 #header-slider div {
 	position: absolute;
 	left: 150%;
-
 }
 
 .slides {
@@ -991,9 +989,10 @@ header {
 	padding: 3px;
 	list-style: none;
 	margin: 0;
+	object-fit: cover;
+	object-position: 0 0;
+	overflow: hidden;
 }
-
-
 
 /* Home Page - Featured Section */
 
@@ -1002,11 +1001,12 @@ header {
 	text-align: center;
 	float: right;
 	padding-left: 2rem;
-	margin-top: 2rem;
+	margin-top: 8rem;
 }
 
-.featured h3 {
+.featured h2 {
 	margin-bottom: 0;
+	font-size: 1.5em;
 }
 
 .featured p {
@@ -1034,6 +1034,7 @@ hr {
 
 .calendar-month-view {
 	width: 60%;
+	float: left;
 }
 
 table.tribe-events-calendar {
