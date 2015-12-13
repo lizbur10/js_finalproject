@@ -19,7 +19,7 @@
 <script type="text/javascript" charset="utf-8">
 
 //Initial placement of images
-var numberOfImages = $("#header-slider div").length,
+var numberOfImages = $("#header-slider div img").length,
 	counter = 0,
 	totalWidth = 0,
 	currentImage,
@@ -34,13 +34,12 @@ while (counter < numberOfImages) {
 	currentImageId = "galleryImage" + counter;
 	currentImage = document.getElementById(currentImageId);
 	currentImageWidth = Math.floor(((240/currentImage.naturalHeight) * currentImage.naturalWidth));
-	console.log(currentImageWidth);
 	$("#" + currentImageId).parent().css("left",totalWidth);
 	totalWidth = totalWidth + currentImageWidth;
 }
 //End initial placement
 
-//Slider
+//Image slider
 counter = 1;
 
 window.setInterval(runSlider, 5000);
@@ -59,6 +58,25 @@ function runSlider() {
 	counter++;
 	if (counter > numberOfImages) { counter = 1; }
 }
+//End Image slider
+
+//Start hover text
+//"mousemove" code came from: http://www.alessioatzeni.com/blog/simple-tooltip-with-jquery-only-text/
+  $("[class^=tribe-events-category-] a").hover(function() {
+    $(this).parent().after("<div class='hover-text'>Here's some info about this outing.</div>");
+    }, 
+	function() {
+	  	$(this).parent().parent().find("div.hover-text").remove();
+	});
+/*    }).mousemove(function(e) {
+          var mousex = e.pageX + 20; //Get X coordinates
+          var mousey = e.pageY + 10; //Get Y coordinates
+          $('.hover-text')
+          .css({ top: mousey, left: mousex });
+    }
+);
+*/
+//End hover text
 
 </script> 
 

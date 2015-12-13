@@ -982,6 +982,10 @@ header {
 	left: 150%;
 }
 
+#header-slider img {
+	cursor: pointer;
+}
+
 .slides {
 	position: relative;
 	height: 240px;
@@ -1128,6 +1132,21 @@ li.tribe-events-nav-next {
 	color: lightgray;
 }
 
+.hover-text {
+  position: absolute;
+  border: 2px solid #000;
+  background-color: #D5DBD8;
+  border-radius: 5px;
+  padding: 10px;
+  color: #2B2828;
+  z-index: 3;
+}
+
+.hover-text p {
+  line-height: 1em;
+  margin: 5px;
+}
+
 
 
 /* Styling of Member Information page */
@@ -1180,6 +1199,10 @@ li.tribe-events-nav-next {
 
 /* Single Events Page Styling */
 
+.entry-header {
+	display: none;
+}
+
 .main-content {
 	padding-bottom: .5rem;
 	border-bottom: 1px solid lightgray;
@@ -1205,8 +1228,6 @@ li.tribe-events-nav-next {
 #tribe-events-footer .tribe-events-sub-nav li.tribe-events-nav-next, #tribe-events-header .tribe-events-sub-nav li.tribe-events-nav-next {
 	float: right;
 }
-
-
 
 
 /* Footer */

@@ -31,15 +31,15 @@
 
 	<header id="masthead" class="site-header" role="banner">
 	    <section id='header-slider'>
-			<?php $images = get_field('image_gallery'); 
-	        if( $images ): 
+			<?php $images = get_field('image_gallery'); ?>
+	        <?php if( $images ): 
 	        	$counter = 1;
                 foreach( $images as $image ): 
                 	$ImageId = "galleryImage$counter"; ?>
                     <div><img id="<?php echo $ImageId ?>" class="slides" src="<?php echo $image['url']; ?>"  />
 	                </div>
-	                <?php $counter++; 
-                endforeach;
+	                <?php $counter++; ?>
+               <?php endforeach;
 	        endif; ?>
 	    </section>
 
