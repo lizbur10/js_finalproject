@@ -33,13 +33,18 @@
 	    <section id='header-slider'>
 			<?php $images = get_field('image_gallery'); ?>
 	        <?php if( $images ): 
-	        	$imagesPresent = true;
 	        	$imageCounter = 1;
+	        	$totalWidth = 0;
                 foreach( $images as $image ): 
-                	$ImageId = "galleryImage$imageCounter"; ?>
-                    <div><img id="<?php echo $ImageId ?>" class="slides" src="<?php echo $image['url']; ?>"  />
+		        	$filename = $image['url'];
+		        	list($width, $height) = getimagesize($filename);
+		        	$newHeight = 240;
+		        	$newWidth = (int) round(240/$height * $width);
+	               	$ImageId = "galleryImage$imageCounter"; ?>
+                    <div style="left: <?php echo $totalWidth; ?>px;"><img id="<?php echo $ImageId ?>" class="slides" height="<?php echo $newHeight; ?>" width="<?php echo $newWidth; ?>" src="<?php echo $image['url']; ?>"  />
 	                </div>
-	                <?php $imageCounter++; ?>
+	                <?php $imageCounter++; 
+	                $totalWidth = $totalWidth + $newWidth; ?>
                <?php endforeach; ?>
 	        <?php endif; ?>
 

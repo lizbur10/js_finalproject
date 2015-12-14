@@ -14,8 +14,7 @@ $(document).ready(function() {
 		counter++;
 		currentImageId = "galleryImage" + counter;
 		currentImage = document.getElementById(currentImageId);
-		currentImageWidth = Math.floor(((240/currentImage.naturalHeight) * currentImage.naturalWidth));
-		$("#" + currentImageId).parent().css("left",totalWidth);
+		currentImageWidth = Number( $(currentImage).attr("width") );
 		totalWidth = totalWidth + currentImageWidth;
 	}
 	//End initial placement
@@ -28,7 +27,7 @@ $(document).ready(function() {
 	function runSlider() {
 		firstImageId = "galleryImage" + counter;
 		firstImage = document.getElementById(firstImageId);
-		slideAmount = firstImage.clientWidth + 1;
+		slideAmount = firstImage.clientWidth;
 	//Code below adapted from: http://jsfiddle.net/jtbowden/ykbgT/2/
 		$("#header-slider div").animate({
 			left: '-=' + slideAmount
