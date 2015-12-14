@@ -115,7 +115,7 @@ $event_id = get_the_ID();
 					<?php endif; ?>
 					<div id="outing-registration" class="visually-hidden">
 						<form name="outing-registration" action="#" method="post">
-							<p><label for="name">Name</label>: <input id="name" type="text" name="name" size="30"></p>
+							<p><label for="name">Name</label>: <input id="name" type="text" name="name" size="30" autofocus></p>
 							<p><label for="email">E-mail</label>: <input id="email" type="email" name="email" size="30"></p>
 							<p><label for="number_of_people">Number of people</label>: <input id="number_of_people" type="number" name="number_of_people" min="1" max="4" value="1" required></p>
 							<button id="rsvp-button">RSVP Now</button><button id="cancel-button">Cancel</button>

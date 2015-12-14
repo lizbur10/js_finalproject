@@ -50,12 +50,8 @@ Template Name: Custom Homepage Template
         <?php tribe_show_month(); ?>
     </section>
 
-</div>
 
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/header-slider.js">
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/header-slider.js"></script>
 
-<?php
-	get_footer();
-
-?>
+<?php get_footer(); ?>
 

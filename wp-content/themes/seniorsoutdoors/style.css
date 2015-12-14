@@ -1140,11 +1140,8 @@ li.tribe-events-nav-next {
   padding: 10px;
   color: #2B2828;
   z-index: 3;
-}
-
-.hover-text p {
-  line-height: 1em;
-  margin: 5px;
+  font-size: 1.2rem;
+  width: 150px;
 }
 
 
@@ -1276,6 +1273,7 @@ li.tribe-events-nav-next {
 .copyright {
 	margin-top: 2rem;
 	font-size: .8rem;
+	clear: both;
 }
 
 /* Global stuff */
