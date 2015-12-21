@@ -31,12 +31,12 @@ Template Name: Custom Homepage Template
                     <p><?php echo the_event_start_date(null,FALSE,'l, F j'); ?></p>
 
                     <?php 
-                    if ($other_info) : ?>
-                        <p><?php echo $other_info; ?></p>
-                    <?php else: ?>
+                    if (has_term('so-general-meeting','tribe_events_cat')) : ?>
                         <p class="single-space">New Member Orientation: 5:30 pm</p>
                         <p class="single-space">Social: 6:30 pm</p>
                         <p class="single-space">Meeting: 7:00 pm</p>
+                    <?php elseif ($other_info) : ?>
+                        <p><?php echo $other_info; ?></p>
                     <?php endif;
     		        $content = the_content(); ?>
                 <?php endif; 
